@@ -54,8 +54,6 @@ class MyDataset(Dataset):
         border = self.transform(border)
         # 将图片合并为8通道数据
         imgs = torch.cat([center, border], dim=0)
-        # 角度转换为类别数
-        # 忘记编码会报错
         label = torch.tensor(angle2Num[angle])
         return imgs.to(setting.device), label.to(setting.device)
 
