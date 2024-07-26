@@ -15,15 +15,6 @@ OUTPUT_PATH.mkdir(exist_ok=True)
 # 标注过的配置信息
 CONFIG_PATH = LABELS_PATH.joinpath("config.json")
 
-
-# LABELS_PATH = ROOT_PATH.joinpath("utils").joinpath("imgs2")  # 需要标注的图片旋转体路径
-# LABELS_BORDER_PATH = LABELS_PATH.joinpath("border")  # 需要标注的图片外部边框路径
-# OUTPUT_PATH = ROOT_PATH.joinpath("labeled")  # 输出旋转到正确角度的验证码图片
-# OUTPUT_PATH.mkdir(exist_ok=True)
-# # 标注过的配置信息
-# CONFIG_PATH = LABELS_PATH.joinpath("config.json")
-
-
 class ImageRotatorApp:
     def __init__(self, master):
         self.config = {}
@@ -36,7 +27,6 @@ class ImageRotatorApp:
         # 初始化变量
         self.angle = 0
         self.image_index = 0
-        # 获取路径下全部jpg文件
         self.image1_list = [i for i in LABELS_PATH.glob("*.png")]
         self.all_image_index = len(self.image1_list)
 
