@@ -10,8 +10,6 @@ from torchvision.models.resnet import BasicBlock, conv1x1
 class RotNetW_(nn.Module):
     def __init__(self, groups=1, width_per_group: int = 64) -> None:
         super().__init__()
-        # self.encoder = models.resnet18()
-
         self.groups = groups
         self.base_width = width_per_group
         replace_stride_with_dilation = [False, False, False]
