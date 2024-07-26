@@ -1,7 +1,5 @@
-# 深度定制
 from torch import nn
 
-# from torchvision import models
 from torchvision.models.resnet import BasicBlock, conv1x1
 
 from setting import setting
